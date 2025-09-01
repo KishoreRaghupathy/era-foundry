@@ -1,0 +1,31 @@
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.venv/
+env/
+venv/
+.cache/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+
+# Data
+data/**/*.parquet
+data/**/*.csv
+!data/raw/*.csv  # keep our toy raw CSVs
+data/**/*.json
+data/**/*.xlsx
+
+# Docker
+*.log
+
+# IDE
+.vscode/
+.idea/

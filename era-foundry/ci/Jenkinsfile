@@ -1,0 +1,24 @@
+pipeline {
+  agent any
+  options { timestamps() }
+  stages {
+    stage('Lint') {
+      steps {
+        sh 'python --version'
+        sh 'ruff --version'
+        sh 'ruff .'
+      }
+    }
+    stage('Unit Tests') {
+      steps {
+        sh 'pytest -q'
+      }
+    }
+  }
+  post {
+    always {
+      junit allowEmptyResults: true, testResults: '**/test-results/*.xml'
+      archiveArtifacts artifacts: 'docs/**/*.pdf', allowEmptyArchive: true
+    }
+  }
+}

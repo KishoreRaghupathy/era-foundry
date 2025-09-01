@@ -1,0 +1,3 @@
+-- pcaf_corp_loans.sql (stub for Day 02)
+-- This will become our gold financed emissions view for corporate loans.
+-- We'll populate it in Day 02 when the compute step is ready.

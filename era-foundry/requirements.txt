@@ -1,0 +1,6 @@
+pandas==2.2.2
+pyarrow==16.1.0
+great_expectations==0.18.12
+pytest==8.2.0
+ruff==0.5.7
+python-dotenv==1.0.1
