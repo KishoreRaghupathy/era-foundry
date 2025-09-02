@@ -14,6 +14,11 @@ pipeline {
         sh 'pytest -q'
       }
     }
+    stage('DAG Import') {
+      steps {
+        sh 'python - <<EOF\nfrom dags.pcaf_ingestion_dag import dag; print(dag.dag_id)\nEOF'
+      }
+    }
   }
   post {
     always {

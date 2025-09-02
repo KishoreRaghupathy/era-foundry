@@ -4,3 +4,6 @@ great_expectations==0.18.12
 pytest==8.2.0
 ruff==0.5.7
 python-dotenv==1.0.1
+
+numpy<2.0
+apache-airflow==2.9.3
